@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Using Functions</title>
+</head>
+
+<body>
+    <h1>Adding Using Functions</h1>
+
+    <script>
+        /* Normal Function */
+        function add(num1, num2) {
+            let ans = num1 + num2;
+            document.write(ans + "<br>");
+        }
+        add(5, 8);
+        
+        /* Return value to outside of function */
+        function add1(num1, num2) {
+            let ans = num1 + num2 //assignment operator
+            return ans;
+        }
+        let ans = add1(10, 8)
+        document.write("Return value is " + ans + "<br>")
+
+        /* Anonymous Function */
+        let add2 = function (num1, num2) {
+            let ans = num1 + num2;
+            return ans;
+        }
+        document.write("Return value for anonymous function is " + add2(5, 9))
+    </script>
+</body>
+
+</html>

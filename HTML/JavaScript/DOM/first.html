@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* #container{
+            background-color: aqua;
+        }*/
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p id="text"></p>
+    </div>
+    <script>
+        let container = document.getElementById("container");
+        let text = document.getElementById("text");
+
+        let updateTextPromise = new Promise((resolve, reject) => {
+            text.innerHTML = "Updating text...";
+            setTimeout(()=> {
+                text.innerHTML = "Text updated!";
+                resolve();
+            }, 2000);
+        });
+
+        updateTextPromise.then(() => {
+            container.style.backgroundColor = "green";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive Eligibility</title>
+    <script>
+        function eligible() {
+            var age = document.getElementById("age").value;
+            var place = document.getElementById("place").string;
+            if (age = 18) and (place = "Ontario") {
+                document.getElementById("ans").innerHTML = "You are eligible";
+            }
+            else {
+                document.getElementById("ans").innerHTML = "You are not eligible";
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <h1>Drive Eligibility</h1>
+    <label for="age">Enter your age</label>
+    <input type="text" id="age" name="age">
+
+    <label for="place">Enter where you live:</label>
+    <input type="text" id="place" name="place">
+
+    <button onclick="eligible()">Submit</button>
+
+    <p id="ans"></p>
+
+    <script></script>
+</body>
+
+</html>

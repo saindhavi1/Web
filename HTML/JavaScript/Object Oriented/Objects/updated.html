@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // creating a c;ass to create an object
+        class person {
+            constructor(firstname, lastname) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+            }
+
+            fullName() {
+                return "My name is " + this.firstname + " " + this.lastname;
+            }
+        }
+
+        // creating an object
+        let person1 = new person('John', 'Smith');
+
+        console.log(person1.fullName());
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function with no Arguments</title>
+</head>
+
+<body>
+    <script>
+        // Traditional Anonymous Function
+        let total1 = (function (a, b) {
+            return a + b + 100;
+        });
+        document.write("First Total: " + total1(6, 6) + "<br>");
+
+        // Arrow Function
+        let total2 = (s, t) => s + t + 100;
+        document.write("Second Total: " + total2(10, 6) + "<br>");
+
+        // Traditional Anonymous Function (no arguments)
+        const a = 8;
+        const b = 2;
+
+        let total3 = (function () {
+            return a + b + 100;
+        });
+        document.write("Third total: " + total3() + "<br>");
+
+        //Arrow Function (no arguments) 
+        const x = 4;
+        const y = 2;
+
+        let total4 = () => x + y + 100;
+        document.write("Fourth total: " + total4());
+
+    </script>
+</body>
+
+</html>

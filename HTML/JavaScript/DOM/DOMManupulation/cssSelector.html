@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight{
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello World!</h1>
+        <p>This is a paragraph</p>
+        <p>This is paragraph is highlighted.</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+
+    <script>
+        const heading = document.querySelector('h1');
+        const paragraph = document.querySelector('p');
+        const listItems = document.querySelectorAll('li');
+        //const container = document.querySelectorAll('.container');
+        //const heading = container[0].querySelector('h1');
+        //const listItems = container[0].querySelectorAll('li');
+        const highlightedParagraph = document.querySelector('.highlight')
+
+        heading.style.color = 'blue';
+        paragraph.style.fontStyle = 'italic';
+        highlightedParagraph.style.fontSize = '20px'
+
+        listItems.forEach(item =>{
+            item.style.color = 'green';
+            item.style.listStyleType = 'none';
+            //item.classList.add('highlight');
+        });
+    </script>
+</body>
+</html>

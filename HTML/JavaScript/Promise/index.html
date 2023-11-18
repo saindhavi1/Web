@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Example</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .row{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+            padding: 8px 0;
+        }
+
+        .row:Last-child{
+            border-bottom: none;
+        }
+
+        .cell{
+            flex: 1;
+            padding: 8px;
+        }
+
+        .cell:first-child{
+            flex: 2;
+            font-weight: bold;
+        }
+
+        .cell:nth-child(2){
+            flex: 1;
+            font-style: italic;
+            color: #666;
+        }
+
+        .cell:last-child{
+            flex: 3;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="table-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>

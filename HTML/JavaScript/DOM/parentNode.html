@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript parentNode</title>
+</head>
+<body>
+    <div id="main">
+        <p class="note">This is a note!</p>
+        <ul id="menu">
+            <li>Home</li>
+            <li>Products</li>
+            <li id="sibling">Customer Support</li>
+            <li>Careers</li>
+            <li>News</li>
+        </ul>
+    </div>
+
+    <script>
+        //Using querySelector, the element with the note class is assigned to note
+        //variable
+        let note = document.querySelector('.note');
+        //Then the program finds the parent node of the selected element
+        console.log(note.parentNode);
+
+        let child = document.getElementById("menu");
+        //children
+        console.log(child.firstElementChild);
+        console.log(child.lastElementChild);
+        console.log(child.children);
+        console.log(child.childNodes);
+
+        //siblings
+        let siblingNode = document.getElementById("sibling");
+        console.log(siblingNode.nextElementSibling);
+        console.log(siblingNode.previousElementSibling);
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generate Numbers</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			padding: 20px;
+		}
+		h1 {
+			margin-bottom: 10px;
+		}
+		button {
+			font-size: 16px;
+			padding: 10px;
+			margin-bottom: 20px;
+		}
+		#result, #sum {
+			font-size: 24px;
+			margin-bottom: 10px;
+			padding: 10px;
+			background-color: #f5f5f5;
+			border-radius: 5px;
+			text-align: center;
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Generate Numbers</h1>
+	<button id="generate-btn">Generate</button>
+	<p id="result"></p>
+	<p id="sum"></p>
+
+	<script>
+		// Get a reference to the button and result elements
+		const generateBtn = document.getElementById("generate-btn");
+		const resultEl = document.getElementById("result");
+		const sumEl = document.getElementById("sum");
+
+		// Add an event listener to the button
+		generateBtn.addEventListener("click", () => {
+			// Generate 5 random numbers between 1 and 100
+			const numbers = [];
+			let sum = 0;
+			for (let i = 0; i < 5; i++) {
+				const num = Math.floor(Math.random() * 100) + 1;
+				numbers.push(num);
+				sum += num;
+				// Display each number one at a time
+				setTimeout(() => {
+					resultEl.textContent = `Number ${i + 1}: ${num}`;
+				}, i * 1000);
+			}
+			// Display the sum of the numbers
+			setTimeout(() => {
+				sumEl.textContent = `Sum: ${sum}`;
+			}, 5000);
+		});
+	</script>
+
+</body>
+</html>
+

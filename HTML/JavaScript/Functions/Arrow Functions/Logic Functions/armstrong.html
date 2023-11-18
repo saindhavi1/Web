@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>
+</head>
+
+<body>
+    <script>
+        let armstrong = () => {
+            let sum = 0;
+            let num = prompt("Enter a 3 digit number:", 0);
+            let check = num;
+
+            while (check > 0) {
+                let remainder = check % 10;
+                sum += remainder ** 3;
+                /*document.write(remainder + "<br>");
+                document.write(sum + "<br>");*/
+                check = parseInt(check / 10);
+                //document.write(check + "<br>");
+            }
+
+            if (sum == num) {
+                document.write(num + " is an Armstrong number.")
+            }
+
+            else {
+                document.write(num + " is not an Armstrong number.")
+            }
+        }
+
+        armstrong();
+    </script>
+</body>
+
+</html>

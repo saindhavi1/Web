@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function Break Down</title>
+</head>
+<body>
+    <script>
+        //Traditional Anonymous Function
+        (function (a) {
+            return a + 100;
+        });
+
+        //Arrow Function Break Down
+
+        /*1. Remove the word "function" and place arrow between 
+        argument and opening body bracket*/
+        (a) => {
+            return a + 100;
+        };
+
+        //2. Remove the body {braces} and word "return" - return is implied
+        (a) => a + 100
+
+        //3. Remove the argument (a) parentheses()
+        a => a + 100;
+    </script>
+</body>
+</html>

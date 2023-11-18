@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // prototype object
+        let person = {
+            firstname: "Steve",
+            lastname: 'Jobs',
+            fullName: function () {
+                return "My name is " + this.firstname + " " + this.lastname;
+            }
+        }
+
+        //create a new object
+        let newPerson = Object.create(person);
+        console.log(newPerson);
+        console.log(newPerson.fullName());
+        console.log("change the value of the new object");
+        // change the value of the new object
+        newPerson.firstname = "John";
+        newPerson.lastname = "Smith";
+
+        console.log(newPerson.fullName());
+        console.log(newPerson);
+    </script>
+</body>
+</html>

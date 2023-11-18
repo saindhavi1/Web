@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swapping Two Numbers</title>
+</head>
+
+<body>
+    <h1>Swapping Two Numbers</h1>
+    <p id="swap"></p>
+    <p id="ans"></p>
+
+    <script>
+        function swap() {
+            var a = 10;
+            var b = 20;
+            var c = 0;
+            document.getElementById("swap").innerHTML = "Before swap A is: " + a + " B is: " + b;
+            a = a + b;
+            b = a - b;
+            a = a - b;
+            document.getElementById("ans").innerHTML = "After swap A is: " + a + " B is: " + b;
+        }
+        swap();
+    </script>
+
+</body>
+
+</html>

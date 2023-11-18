@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Fetch with Promise</title>
+</head>
+<body>
+    <h1>Using Fetch with Promise</h1>
+    <script>
+        fetch("./users.json")
+        .then((response)=> {
+            return response.json();
+        })
+        .then((data)=> {
+            data.forEach(item => {
+                console.log(`${item.firstName} ${item.lastName}`)
+                document.write(`<br> ${item.firstName} ${item.lastName}`);
+            });
+        });
+    </script>
+</body>
+</html>

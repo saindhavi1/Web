@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Number using Arrow Function</title>
+</head>
+<body>
+    <script>
+        let factorial = () => {
+            let num = prompt("Enter your number:", "0");
+            let fact = 1;
+
+            for(num; num>=1; num--) {
+                fact=fact*num;
+            }
+
+            document.write("Answer: ", fact)
+        }
+
+        factorial();
+    </script>
+</body>
+</html>

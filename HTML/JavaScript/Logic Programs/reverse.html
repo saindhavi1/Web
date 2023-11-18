@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printing in Reverse</title>
+</head>
+
+<body>
+    <h1>Printing Numbers in Reverse</h1>
+    <script>
+        let num = 54321;
+        let lastdigit = 0;
+        let reverse = 0;
+
+        document.write("Original Value: " + num);
+
+        while (num != 0) {
+            lastdigit = num % 10;
+            reverse = reverse * 10 + lastdigit;
+            num = Math.floor(num/10);
+            //num=num/10
+        }
+
+        document.write("<br> Reversed Number: " +reverse);
+    </script>
+</body>
+
+</html>

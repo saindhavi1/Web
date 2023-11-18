@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    <script>
+        class Vehicle {
+            constructor(name, type) {
+                this.name = name;
+                this.type = type;
+            }
+
+            getName() {
+                return this.name;
+            }
+
+            getType() {
+                return this.type;
+            }
+        }
+
+        class Car extends Vehicle {
+            constructor(name) {
+                super(name, 'car');
+            }
+
+            getName() {
+                return 'It is a car: ' + super.getName();
+            }
+        }
+
+        let car = new Car('Tesla');
+        console.log(car.getName()); // It is a car: Tesla
+        console.log(car.getType()); //car
+    </script>
+</body>
+</html>

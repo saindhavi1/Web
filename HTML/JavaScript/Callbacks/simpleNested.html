@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Hell</title>
+</head>
+<body>
+    <script>
+        function someThing(callback) {
+            console.log("Do something!"+callback);
+            callback();
+        }
+
+        function someThingElse(callback) {
+            console.log("Do Something Else!"+callback);
+            callback();
+        }
+
+        function doThirdThing (callback) {
+            console.log("Do Third thing!"+callback);
+            callback();
+        }
+
+        someThing(function(){
+            console.log("First anonymous callback!");
+            someThingElse(function(){
+                console.log("Second anonymous callback!")
+                doThirdThing(function() {
+                    console.log("Third anonymous callback!");
+                })
+            })
+        })
+    </script>
+</body>
+</html>

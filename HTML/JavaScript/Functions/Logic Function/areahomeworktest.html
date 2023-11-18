@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating Area</title>
+    <script>
+        function square(len, wid) {
+            var length = document.getElementById("length").value;
+            var width = document.getElementById("width").value;
+            var area = length * width;
+            document.getElementById("area").innerHTML = ("The area is: " + area)
+        }
+        function circle(radius) {
+            var radius = document.getElementById("radius").value;
+            var area = 3.14 * radius ** 2;
+            document.getElementById("circle").innerHTML = ("The area is: " + area)
+        }
+        function triangle(base, height) {
+            var base = document.getElementById("base").value;
+            var height = document.getElementById("height").value;
+            var area = (base * height) / 2;
+            document.getElementById("triangle").innerHTML = ("The area is: " + area)
+        }
+        function trapezoid(base1, base2, trapheight) {
+            var base1 = document.getElementById("base1").value;
+            var base2 = document.getElementById("base2").value;
+            var trapheight = document.getElementById("trapheight").value;
+            var area = ((parseInt(base1) + parseInt(base2)) / 2) * trapheight;
+            document.getElementById("trapezoid").innerHTML = ("The area is: " + area)
+        }
+    </script>
+
+    <style>
+        h1 {
+            color: aqua;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculating Area</h1>
+
+    <form id="form">
+        <p>Select which shape you want to find the area for:</p>
+
+        <input type="radio" id="square" name="shapes" value="square"> 
+        </input>
+        <label for="square">Square or Rectangle</label>
+
+        <input type="radio" id="triangle" name="shapes" value="triangle">
+        <label for="triangle">Triangle</label>
+
+        <input type="radio" id="circle" name="shapes" value="circle">
+        <label for="circle">Circle</label>
+
+        <input type="radio" id="trapezoid" name="shapes" value="trapezoid">
+        <label for="trapezoid">Trapezoid</label>
+
+        <button type="submit">Submit</button>
+
+        <p id="output"></p>
+
+    </form>
+    <pre id="shape"></pre>
+
+    <script>
+        let submit = document.getElementById("submit");
+        let output = document.getElementById("output");
+
+        submit.addEventListener('click', () => {
+            let shape = document.getElementsByName("shape");
+            shape.forEach((shape) => {
+                if (shape.checked) {
+                    output.innerText = `You selected: ${shape.value}`;
+                }
+            });
+        });
+    </script>
+
+
+
+    <p>Enter the values to calculate the area of a square or rectangle</p>
+
+    <label for="length">Enter the length:</label>
+    <input type="text" id="length" name="length">
+    <br>
+    <br>
+    <label for="width">Enter the width:</label>
+    <input type="text" id="width" name="width">
+    <br>
+    <br>
+
+    <button onclick="square()"> Area of Square/Rectangle</button>
+
+    <p id="area"></p>
+
+    <p>Enter the values to calculate area of a circle:</p>
+
+    <label for="radius">Enter the radius:</label>
+    <input type="text" id="radius" name="radius">
+    <br>
+    <br>
+
+    <button onclick="circle()">Area of a circle</button>
+
+    <p id="circle"></p>
+
+    <p>Enter the values to calculate area of a triangle:</p>
+
+    <label for="base">Enter the base:</label>
+    <input type="text" id="base" name="base">
+    <br>
+    <br>
+    <label for="height">Enter the height:</label>
+    <input type="text" id="height" name="height">
+    <br>
+    <br>
+
+    <button onclick="triangle()">Area of a Triangle</button>
+    <p id="triangle"></p>
+
+    <p>Enter the values to calculate the area of a trapezoid:</p>
+
+    <label for="base1">Enter base 1:</label>
+    <input type="text" id="base1" name="base1">
+    <br>
+    <br>
+    <label for="base2">Enter base 2:</label>
+    <input type="base2" id="base2" name="base2">
+    <br>
+    <br>
+    <label for="trapheight">Enter the height:</label>
+    <input type="text" id="trapheight" name="trapheight">
+    <br>
+    <br>
+
+    <button onclick="trapezoid()">Area of a Trapezoid</button>
+    <p id="trapezoid"></p>
+
+</body>
+
+</html>

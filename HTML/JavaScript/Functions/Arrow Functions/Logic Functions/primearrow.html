@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Arrow</title>
+</head>
+
+<body>
+    <script>
+        let isPrime = true;
+        let prime = () => {
+            let num = prompt("Enter a number", 0)
+            for (check = 2; check < num; check++) {
+                if (num % check == 0) {
+                    isPrime = false;
+                    break
+                }
+            }
+            if (isPrime) {
+                document.write(num + " is a prime number.");
+            }
+            else {
+                document.write(num + " is not a prime number.");
+            }
+        }
+        prime();
+    </script>
+</body>
+
+</html>

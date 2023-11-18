@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive Eligibility</title>
+</head>
+
+<body>
+    <h1>Drive Eligibility</h1>
+    <p id="ans"></p>
+    <script>
+        var age = 20;
+        var place = "Ontario";
+
+        /* Nested Loop:
+        if (age >= 18 && age <= 90) {
+            if (place == "Ontario" || place == "Quebec")
+                document.getElementById("ans").innerHTML = "You are eligible";
+        }
+        else
+            document.getElementById("ans").innerHTML = "You are not eligible";*/
+
+        //One line:
+        if ((age >= 18 && age <= 90) && (place == "Ontario" || place == "Quebec"))
+            document.write("You can drive");
+        else
+            document.write("You cannot drive");
+
+    </script>
+</body>
+
+</html>

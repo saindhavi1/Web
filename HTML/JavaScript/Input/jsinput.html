@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Javascript Function</title>
+    <script>
+        function area(len, wid) {
+            var length = document.getElementById("length").value;
+            var width = document.getElementById("width").value;
+            var area = length * width;
+            document.getElementById("area").innerHTML = ("The area is: " + area)
+        }
+    </script>
+</head>
+
+<body>
+    <h1>HTML DOM Events</h1>
+    <h2>The onclick Event</h2>
+
+    <p>The onclick event triggers a function when an element is clicked on</p>
+    <p>Click to trigger a function that will output "Hello World":</p>
+
+    <label for="length">Enter the length:</label>
+    <input type="text" id="length" name="length">
+    <br>
+    <br>
+    <label for="width">Enter the width:</label>
+    <input type="text" id="width" name="width">
+    <br>
+    <br>
+
+    <button onclick="area()"> Area </button>
+
+    <p id="area"></p>
+
+</body>
+
+</html>

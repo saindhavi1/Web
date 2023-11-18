@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS List</title>
+    <style>
+         ul.liststyle{
+             list-style:square;
+             list-style-position: inside;
+         }
+
+         ol.liststyle{
+             list-style: tamil;
+             list-style-position: outside;
+             
+         }
+
+         ul.mystyle{
+             list-style:"\1F44D";
+             margin: 50px;
+         }
+
+         ul.li{
+             padding-right: 200px;
+         }
+         ul.nostyle{
+             /*    This will use in menu                  */
+            list-style:none;  
+           /*list-style-image: linear-gradient(to left bottom, rgb(0, 255, 76), rgb(254, 1, 246));*/
+          
+         }
+
+         ul.gradient{
+
+             list-style-image: linear-gradient(to left bottom, rgb(0, 255, 76), rgb(254, 1, 246));
+         }
+
+         ul.imagestyle{
+            list-style-image: url("icons8-jake-40.png");
+         }
+    </style>
+</head>
+<body>
+    <h1>CSS List style</h1>
+    <!-- This will use in menu     --> 
+    <ul class="nostyle">
+        <li>BBC</li>
+        <li>CNN</li>
+        <li>CBC</li>
+        <li>CTV</li>
+    </ul>
+
+    <ul class="liststyle">
+        <li>BBC</li>
+        <li>CNN</li>
+        <li>CBC</li>
+        <li>CTV</li>
+    </ul>
+
+    <ol class="liststyle">
+        <li>BBC</li>
+        <li>CNN</li>
+        <li>CBC</li>
+        <li>CTV</li>
+    </ol>
+   
+    <ul class="mystyle">
+        <li>Bun</li>
+        <li>Rice</li>
+        <li>Puttu</li>
+        <li>StringHoppers</li>
+    </ul>
+
+    <ul class="imagestyle">
+        <li>BBC</li>
+        <li>CNN</li>
+        <li>CBC</li>
+        <li>CTV</li>
+    </ul>
+    
+    <ul class="gradient">
+        <li>BBC</li>
+        <li>CNN</li>
+        <li>CBC</li>
+        <li>CTV</li>
+    </ul>
+
+</body>
+</html>

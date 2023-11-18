@@ -1,0 +1,86 @@
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.num1-card{
+    border: .3rem solid #b85d1c;
+    background-color: #12346f;
+    height: 30rem;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.num-header{
+    color: #b85d1c;
+    text-decoration: underline;
+}
+
+.num-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    width: 90%;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: #b85d1c;
+    margin-bottom: 1rem;
+}
+
+.start-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    padding: 1.5rem 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #b85d1c;
+    background-color: transparent;
+    border: .1rem solid #b85d1c;
+    border-radius: 10rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.display-sum{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b85d1c;
+    margin: 1.5rem;
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+.start-input{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem;
+}
+
+.start-input label {
+    color: #b85d1c;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.answer {
+    color: #b85d1c;
+    font-size: 1.5rem;
+}
+
+.hidden{
+    display: none;
+}

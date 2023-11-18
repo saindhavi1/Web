@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener Example</title>
+</head>
+<body>
+    <h1>Add Items to List</h1>
+    <button id="addItemButton">Add Item to List</button>
+    <ul id="myList">
+    </ul>
+
+    <script>
+        const addItemButton = document.getElementById('addItemButton');
+        const myList = document.getElementById("myList");
+
+        function addItemToList() {
+            const newListItem = document.createElement("li");
+            newListItem.textContent = "New List Item";
+            myList.appendChild(newListItem);
+        }
+
+        addItemButton.addEventListener("click", addItemToList);
+    </script>
+</body>
+</html>

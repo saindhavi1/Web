@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>My Heading</h1>
+        <p>Some text goes here...</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+    </div>
+    <script>
+        const listItems = document.querySelectorAll("ul>li");
+        console.log(listItems);
+        for(i=0; i<listItems.length; i++) {
+            console.log(listItems[i].textContent);
+        }
+    </script>
+</body>
+</html>

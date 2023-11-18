@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Every 3 Seconds</title>
+</head>
+<body>
+    <script>
+        function showTime() {
+            let dateTime = new Date();
+
+            let time = dateTime.toLocaleTimeString();
+
+            document.write("<br>" +time);
+
+            setTimeout(showTime, 2000);
+        }
+
+        showTime();
+    </script>
+</body>
+</html>

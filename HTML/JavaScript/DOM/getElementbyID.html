@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        <h1 id="head">Testing Value</h1>
+        <h2 class="header">A heading with class="example" in div</h2>
+        <p class="example">A paragraph with class="example" in div</p>
+        <p class="example">Also a paragraph with class="example in div</p>
+    </div>
+    <p>Click the buttn to change the text of the first p element with class="example" in div</p>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction() {
+
+            //Use getElementByID         
+            
+            let h1value = document.getElementById("head");
+            console.log(h1value);
+            console.log(h1value.textContent);
+            h1value.textContent= "Hello World After click Try it button";
+        }
+    </script>
+</body>
+</html>

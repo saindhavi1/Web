@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Average</title>
+</head>
+<h1>Average for Grades</h1>
+
+<body>
+    <p id="grade"></p>
+    <script>
+        var science = 85;
+        var math = 65;
+        var english = 70;
+        var french = 70;
+        var amount_of_subject = 4;
+
+        var average = 0;
+        var message;
+        average = (science + math + english + french) / amount_of_subject;
+        document.write(average)
+
+        /*
+        if (average < 40)
+            document.getElementById("grade").innerHTML="F";
+        else if (average >= 40 && average <= 60)
+            document.getElementById("grade").innerHTML="S";
+        else if (average > 60 && average <= 70)
+            document.getElementById("grade").innerHTML="C";
+        else if (average > 70 && average <=80)
+            document.getElementById("grade").innerHTML="B";
+        else
+            document.getElementById("grade").innerHTML="A";
+        
+        */
+        average < 40 ? (message = 'F') : (message = 'S');
+        average > 60 && average <= 70 ? (message = 'C') : average > 70 && average <= 80 ? (message = 'B') : (message = 'A');
+        
+        document.getElementById("grade").innerHTML=message;
+
+    </script>
+</body>
+
+</html>

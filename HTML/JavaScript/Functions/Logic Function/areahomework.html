@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating Area</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&display=swap" rel="stylesheet">
+
+    <script>
+        function square(len, wid) {
+            var length = document.getElementById("length").value;
+            var width = document.getElementById("width").value;
+            var area = length * width;
+            document.getElementById("area").innerHTML = ("The area is: " + area)
+        }
+        function circle(radius) {
+            var radius = document.getElementById("radius").value;
+            var area = 3.14 * radius ** 2;
+            document.getElementById("circle").innerHTML = ("The area is: " + area)
+        }
+        function triangle(base, height) {
+            var base = document.getElementById("base").value;
+            var height = document.getElementById("height").value;
+            var area = (base * height) / 2;
+            document.getElementById("triangle").innerHTML = ("The area is: " + area)
+        }
+        function trapezoid(base1, base2, trapheight) {
+            var base1 = document.getElementById("base1").value;
+            var base2 = document.getElementById("base2").value;
+            var trapheight = document.getElementById("trapheight").value;
+            var area = ((parseInt(base1) + parseInt(base2)) / 2) * trapheight;
+            document.getElementById("trapezoid").innerHTML = ("The area is: " + area)
+        }
+    </script>
+
+    <style>
+        h1 {
+            color: rgb(114, 133, 243);
+            font-family: 'PT Serif', serif;
+            font-weight: 900;
+            font-style: italic;
+            text-decoration: underline;
+
+        }
+
+        p {
+            color: rgb(203, 149, 247);
+            font-size: medium;
+            font-weight: 200;
+            font-family: 'Libre Bodoni', serif;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        legend {
+            color: rgb(231, 147, 136);
+            text-align: center;
+            font-size: larger;
+            font-family: 'Arvo', serif;
+            font-weight: bold;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h1>Calculating Area</h1>
+        <fieldset>
+            <legend>Square/Rectangle</legend>
+            <p>Enter the values to calculate the area of a square or rectangle</p>
+
+            <label for="length" class="label">Enter the length:</label>
+            <input type="text" id="length" name="length" class="input">
+            <br>
+            <br>
+            <label for="width">Enter the width:</label>
+            <input type="text" id="width" name="width">
+            <br>
+            <br>
+
+            <button onclick="square()"> Area of Square/Rectangle</button>
+
+            <p id="area"></p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Circle</legend>
+            <p>Enter the values to calculate area of a circle:</p>
+
+            <label for="radius">Enter the radius:</label>
+            <input type="text" id="radius" name="radius">
+            <br>
+            <br>
+
+            <button onclick="circle()">Area of a circle</button>
+
+            <p id="circle"></p>
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Triangle</legend>
+            <p>Enter the values to calculate area of a triangle:</p>
+
+            <label for="base">Enter the base:</label>
+            <input type="text" id="base" name="base">
+            <br>
+            <br>
+            <label for="height">Enter the height:</label>
+            <input type="text" id="height" name="height">
+            <br>
+            <br>
+
+            <button onclick="triangle()">Area of a Triangle</button>
+            <p id="triangle"></p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Trapezoid</legend>
+            <p>Enter the values to calculate the area of a trapezoid:</p>
+
+            <label for="base1">Enter base 1:</label>
+            <input type="text" id="base1" name="base1">
+            <br>
+            <br>
+            <label for="base2">Enter base 2:</label>
+            <input type="base2" id="base2" name="base2">
+            <br>
+            <br>
+            <label for="trapheight">Enter the height:</label>
+            <input type="text" id="trapheight" name="trapheight">
+            <br>
+            <br>
+
+            <button onclick="trapezoid()">Area of a Trapezoid</button>
+            <p id="trapezoid"></p>
+        </fieldset>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Fetch with Promise </title>
+</head>
+<body>
+    <h1>Using Fetch with Promise</h1>
+    <script>
+    fetch('./users.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.createElement('div');
+    container.style.display = 'flex';
+    container.style.flexWrap = 'wrap';
+    
+    data.forEach(item => {
+      const box = document.createElement('div');
+      box.style.backgroundColor = 'lightgray';
+      box.style.padding = '10px';
+      box.style.margin = '10px';
+      box.style.width = '200px';
+      box.style.height = '200px';
+      
+      Object.entries(item).forEach(([key, value]) => {
+        const p = document.createElement('p');
+        p.textContent = `${key}: ${value}`;
+        box.appendChild(p);
+      });
+      
+      container.appendChild(box);
+    });
+    
+    document.body.appendChild(container);
+  })
+  .catch(error => console.error(error));
+
+    </script>
+</body>
+</html>

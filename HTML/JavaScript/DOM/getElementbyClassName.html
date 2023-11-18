@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        <h2 class="header">A heading with class="example" in div</h2>
+        <p class="example">A paragraph with class="example" in div</p>
+        <p class="example">Also a paragraph with class="example" in div</p>
+    </div>
+    <p>Click the button to change the text of the first p element with class="exmaple" in div</p>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        let paragraph = document.getElementsByClassName("example");
+        console.log(paragraph);
+        console.log(paragraph[0].textContent);
+        console.log(paragraph[1].textContent);
+
+        for(i=0; i<paragraph.length;i++) {
+            console.log(paragraph[i].textContent);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div {
+            height: 100px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo" style="background-color:red"></div>
+
+    <button id="press">Click Me!</button>
+    <p id="print"></p>
+    <script>
+        document.getElementById("press").addEventListener("click", switchColor)
+
+        var colour = document.getElementById("demo").style.backgroundColor;
+
+        function changeColor() {
+            console.log(colour);
+            if (colour == "red") {
+                colour = "blue";
+            }
+            else {
+                colour = "red";
+            }
+            console.log(colour);
+            return colour;
+
+        }
+
+        function switchColor(colour) {
+            document.getElementById("demo").style.backgroundColor = changeColor(colour);a
+        }
+
+        document.getElementById("print").innerHTML = colour;
+    </script>
+</body>
+
+</html>

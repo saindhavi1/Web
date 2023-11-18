@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Tenary Operator</title>
+</head>
+<body>
+    <h1>Learning Tenary Operator</h1>
+    <p id="answer"></p>
+    
+    <script>
+        var age = 15;
+        var message;
+        age >= 16 ? (message = "You can drive") : (message="You cannot drive");
+            /*
+
+                if ( age >= 16)
+                   document.getElementById("answer").innerHTML="You can Drive ";
+                else
+                      document.getElementById("answer").innerHTML="You cannot drive";
+
+
+            */
+
+        document.getElementById("answer").innerHTML=message;
+    </script>
+    
+</body>
+</html>

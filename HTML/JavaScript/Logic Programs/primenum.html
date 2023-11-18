@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers until 100</title>
+</head>
+
+<body>
+    <h1>Prime Numbers until 100</h1>
+    <p>This program will show all the prime number from 0 to 100.</p>
+
+    <script>
+
+        for (num = 2; num < 100; num++) {
+            prime = true;
+            for (check = 2; check < num; check++) {
+                if (num % check == 0) {
+                    prime = false;
+                }
+            }
+            if (prime) {
+                document.write(num + '<br>');
+            }
+
+        }
+    </script>
+</body>
+
+</html>

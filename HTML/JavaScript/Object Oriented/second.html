@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning JS ES6 class</title>
+</head>
+<body>
+    <h1>Learning JS ES6 class</h1>
+    <script>
+        "use scrict";
+
+        class Person {
+            /*name;
+            age;*/
+
+            constructor(name,age) {
+                this.name=name;
+                this.age=age;
+            }
+
+            introduceSelf() {
+                console.log(`Hi! I'm ${this.name} and I am ${this.age} old.`);
+                console.log("Hi I'm "+this.name+" and I am " +this.age+" old.")
+            }
+
+        }
+
+        const giles = new Person('Giles', '15');
+        giles.introduceSelf(); 
+    </script>
+</body>
+</html>

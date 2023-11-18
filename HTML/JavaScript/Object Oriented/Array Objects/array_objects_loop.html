@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Objects Loop</title>
+</head>
+<body>
+    <script>
+        //Array of objects
+
+        let cars = [
+    {
+        color: "purple",
+        type: "minivan",
+        registration: new Date("2022-05-20"),
+        capacity: 7,
+    }, 
+    {
+        color:"red",
+        type: "station wagon",
+        registration: new Date("2021-03-03"),
+        capacity: 5,
+    },
+        ];
+
+        let length = cars.length;
+        for (let i = 0; i<length; i++) {
+            document.write(cars[i].type + "<br>");
+            document.write(cars[i].color + "<br>");
+            document.write(cars[i].registration+"<br>");
+            document.write(cars[i].capacity+"<br>");
+            document.write("<br>");
+        }
+
+        /* console.table(length);
+        console.table(cars[1].color);*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Return Promise Object</title>
+</head>
+<body>
+   <script>
+    "use strict";
+    let asycFunction = function(){
+        return new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve("asycFunction has resolved.");
+            }, 4000)
+        });
+    };
+
+    let asycFunction2 = function() {
+        return new Promise(function(resolve,reject) {
+            setTimeout(function() {
+                resolve("asycFunction2 is done.");
+            }, 5000)
+        });
+    };
+
+    asycFunction().then(function(val){
+        console.log(val);
+    });
+
+    asycFunction2().then(function(val){
+        console.log(val);
+    });
+
+    console.log("LAST STATEMENT ");
+   </script> 
+</body>
+</html>

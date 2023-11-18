@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Array</title>
+</head>
+<body>
+    <script>
+        var cars = ["Ford", "Volvo", "BMW"]
+        document.write(cars+"<br>");
+        document.write(cars[0]+"<br>");
+        document.write(cars[1]+"<br>");
+        document.write(cars[2]+"<br>");
+        document.write(cars[3]+"<br>");
+
+        cars[3] = "Toyota";
+        document.write(cars+"<br>");
+
+        cars.push("GM");
+        document.write(cars+"<br>");
+
+        cars.pop();
+        document.write("After Removing Elements: "+cars+"<br>");
+        
+        delete cars[0];
+        document.write("After Removing Elements: "+cars+"<br>");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Callbacks</title>
+</head>
+
+<body>
+    <h1>With Callbacks</h1>
+    <script>
+        let url = 'https://www.google.com/'
+
+        function download(url, callback) {
+            //script to download the link here
+            console.log(`Downloading ${url} ...`);
+            setTimeout(() => {
+                //process the link once it is completed (callback function)
+                callback(url); 
+                //callback passes "url" to next function (process function)
+            }, 3000);
+
+        }
+
+        function process(picture) {
+            console.log(`Processing ${picture}`);
+        }
+
+        download(url, process);
+    </script>
+</body>
+
+</html>

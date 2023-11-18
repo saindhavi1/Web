@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student = {
+            name: "Mary",
+            score: 90,
+            school: "East"
+        }
+
+        document.write(student.name);
+        document.write("<br>"+student.score);
+        document.write("<br>"+student.school);
+        console.log(student);
+        /*********************************************************************/
+
+        let students = [
+            {
+                name: "Mary",
+                score: 90,
+                school: "East"
+            },
+            {
+                name: "John",
+                score: 90,
+                school: "South"
+            },
+            {
+                name: "Sam",
+                score: 90,
+                school: "East"
+            }
+        ]
+
+        for(let i=0; i<=students.length; i++) {
+            document.write("<br> <br> <hr>");
+            document.write(students[i].name);
+            document.write("<br>"+students[i].score);
+            document.write("<br>"+students[i].school);
+        }
+    </script>
+</body>
+</html>

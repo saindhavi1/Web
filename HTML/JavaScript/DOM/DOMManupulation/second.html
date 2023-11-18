@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu{
+            border: 0.25rem solid black;
+            border-radius: 0.8rem;
+            width: 25rem;
+            padding-right: 2rem;
+        }
+
+        .list-items{
+            list-style: none;
+            text-align: center;
+            background-color: black;
+            margin: 0.25rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .menu-heading{
+            text-align:center;
+            padding-top: 1rem;
+            padding-left: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <h1 class="menu-heading">Menu Items</h1>
+            <ul>
+                <li class="list-items">Burger</li>
+                <li class="list-items">Hotdog</li>
+                <li class="list-items">Fries</li>
+                <li class="list-items">Pizza</li>
+                <li class="list-items">Pasta</li>
+            </ul>
+        </div>
+        <button onclick="green()">Green</button>
+        <button onclick="yellow()">Yellow</button>
+    </div>
+
+    <script>
+        function green() {
+            const listItem = document.getElementsByClassName("list-items");
+
+            for (i=0; i< listItem.length; i++) {
+                listItem[i].style.backgroundColor = "green";
+                listItem[i].style.color="white";
+            };
+        }
+
+        function yellow() {
+            const listItem = document.getElementsByClassName("list-items");
+
+            for (i=0; i< listItem.length; i++) {
+                listItem[i].style.backgroundColor = "yellow";
+                listItem[i].style.color="black";
+            };
+        }
+    </script>
+</body>
+</html>

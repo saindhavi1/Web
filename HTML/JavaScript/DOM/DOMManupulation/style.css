@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container>.movielist {
+    border: 0.25rem solid rgb(11, 0, 0);
+    border-radius: 0.8rem;
+    width: 25rem;
+    padding-right: 2rem;
+}
+
+.container>.movielist>ul>.list-items {
+    list-style: none;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    font-size: x-large;
+    margin-bottom: 0.25rem;
+    height: 3rem;
+}
+
+#main-heading {
+    text-align: center;
+    padding-top: 1rem;
+}

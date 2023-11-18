@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonancci Series</title>
+</head>
+
+<body>
+    <h1>Fibonacci Series</h1>
+    <script>
+        var num1 = 0;
+        var num2 = 1;
+        var i;
+       
+        for (i = 1; i < 20; i++) {
+            document.write(num1 + "<br>");
+            var fibo = num1 + num2;
+            num1 = num2;
+            num2 = fibo;
+        }
+    </script>
+</body>
+
+</html>

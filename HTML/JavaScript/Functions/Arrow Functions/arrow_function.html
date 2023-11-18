@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+
+        //anonymous function
+        let x = function (x,y) {
+            return x * y;
+        }
+
+        document.write("<br>function expression calling" + x(2,8));
+
+        //using arrow functions
+        let y = (x,y) => {
+            return x * y;
+        }
+        document.write("<br>Arrow function single line calling" + y(8,8));
+
+        //using arrow functions
+        let z = (x,y) => x * y;
+        document.write("<br>Arrow function calling" + z(9,8));
+    </script>
+</body>
+</html>

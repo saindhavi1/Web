@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Accrued Amount</title>
+    <style>
+        h1 {
+            text-decoration: underline;
+            font-size: xx-large;
+            font-family: 'Dancing Script', cursive;
+            color: rgb(100, 100, 241);
+        }
+        .center {
+            text-align: center;
+        }
+        legend {
+            text-align: left;
+            font-size: larger;
+            color: rgb(191, 132, 247);
+        }
+        p {
+            color: rgb(151, 236, 101);
+            font-size: x-large;
+            text-decoration: underline;
+
+        }
+        
+    </style>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+<body>
+    
+    <div class="center">
+    <h1>Total Accrued Amount</h1>
+    <fieldset>
+    <legend>Enter the information below:</legend>
+    <label for="principal">Enter the principal value:</label>
+    <input type="text" id="principal">
+    <br>
+    <br>
+    <label for="rate">Enter the rate:</label>
+    <input type="text" id="rate">
+    <br>
+    <br>
+    <label for="time">Enter the time frame in years:</label>
+    <input type="text" id="time">
+    <br>
+    <br>
+    <button onclick="interest()">Enter</button>
+    <br>
+</fieldset>
+    <p id="accrued"></p>
+</div>
+
+    <script>
+        function interest() {
+            console.log("i am inside the function");
+            var principal = document.getElementById("principal").value;
+            console.log("principal is " + principal);
+            var percent_rate = document.getElementById("rate").value;
+            var time = document.getElementById("time").value;
+            var rate = percent_rate / 100;
+            var accrued = principal * (1 + rate * time);
+            document.getElementById("accrued").innerHTML = "Your total accrued amount is: $" + accrued
+        }
+    </script>
+
+</body>
+
+</html>
