@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox Center Div</title>
+    <link href="http://fonts.cdnfonts.com/css/lohit-tamil" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* background: rgb(213, 239, 250);*/
+            background-image: url(./TamilBK);
+            background-position: center;
+            background-size: cover;
+        }
+
+        header h2 {
+            text-align: center;
+            padding-top: 20px;
+            /* text-shadow: -3px -5px 4px rgba(105,100,100,0.81);*/
+            text-shadow: 5px -4px 5px rgba(251, 143, 0, 0.81);
+            font-family: 'Lohit Tamil', sans-serif;
+            font-size: 150px;
+
+        }
+
+        .parent {
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* Selects the second element of div siblings */
+        .parent :nth-child(2) {
+            background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+            height: 200px;
+            width: 200px;
+            border-radius: 18px;
+            box-shadow: 8px -6px 15px 1px rgba(5, 25, 55, 0.31);
+
+        }
+
+        /* Selects the First element of div siblings */
+        .parent :nth-child(1) {
+            background-image: radial-gradient(circle, #063a89, #93378e, #de3f6f, #fd7640, #ebbb12);
+            height: 200px;
+            width: 200px;
+            border-right: 3px solid rgba(255, 255, 255, 0.367);
+            margin-right: 20px;
+            border-radius: 18px;
+            box-shadow: 8px -6px 15px 1px rgba(5, 25, 55, 0.31);
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>வணகஂகமஂ</h2>
+    </header>
+
+    <div class="parent">
+
+        <div> </div>
+        <div> </div>
+
+    </div>
+    <p>தமிழா</p>
+</body>
+
+</html>

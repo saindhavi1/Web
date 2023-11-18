@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning pseudo element First-letter </title>
+    <style>
+        .parent{
+            display: flex;
+           /* align-items: center;
+            justify-items: center;*/
+        }
+        div {
+            width: 550px;
+            border: 1px solid #000;
+          /*  overflow: auto;*/
+        }
+      
+        p::before{
+            content: '::before pseudo-element. ';
+            font-weight: bold;
+        }
+
+        p::after{
+            content: ' ::after pseudo-element';
+            font-weight: bold;
+        }
+        
+        p::first-letter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Learning pseudo element First-letter</h1>
+    
+        <div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis consequuntur pariatur, quos
+                molestiae suscipit itaque deleniti neque quisquam sit maiores sapiente quis architecto recusandae,
+                delectus
+                soluta fugit non labore?</p>
+
+        </div>
+
+    
+</body>
+
+</html>

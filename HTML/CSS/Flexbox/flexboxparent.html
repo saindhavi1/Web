@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Examples</title>
+
+    <style>
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: large;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .parent {
+            display: flex;
+            background-color: brown;
+        }
+
+        .child {
+            background-color: blue;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .direction {
+            flex-direction: column-reverse;
+            /*flex-direction: row | row-reverse | column | column-reverse;*/
+        }
+
+        .wrap {
+            flex-wrap: wrap-reverse;
+            /*flex-wrap: nowrap | wrap | wrap-reverse;*/
+        }
+
+        .flow {
+            flex-flow: row wrap;
+        }
+
+        .justify {
+            justify-content: space-around;
+            /*justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;*/
+        }
+
+        .align-items {
+            height: 200px;
+            align-items: stretch;
+            /*align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;*/
+        }
+
+        .align-content {
+            height: 600px;
+            flex-wrap: wrap;
+            align-content: stretch;
+            /*align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;*/
+        }
+
+        .gap {
+            flex-wrap: wrap;
+            gap: 10px 30px;
+            /*Same as 
+            row-gap: 10px;
+            column-gap: 20px;*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Container Properties</h1>
+    <p>Flex-Direction</p>
+    <div class="parent direction">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div>
+
+    <p>Flex-Wrap</p>
+    <div class="parent wrap">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="child">9</div>
+        <div class="child">10</div>
+        <div class="child">11</div>
+        <div class="child">12</div>
+        <div class="child">13</div>
+        <div class="child">14</div>
+        <div class="child">15</div>
+        <div class="child">16</div>
+        <div class="child">17</div>
+        <div class="child">18</div>
+        <div class="child">19</div>
+        <div class="child">20</div>
+    </div>
+
+    <p>Flex-Flow</p>
+    <div class="parent flow">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="child">9</div>
+        <div class="child">10</div>
+        <div class="child">11</div>
+        <div class="child">12</div>
+        <div class="child">13</div>
+        <div class="child">14</div>
+        <div class="child">15</div>
+        <div class="child">16</div>
+        <div class="child">17</div>
+        <div class="child">18</div>
+        <div class="child">19</div>
+        <div class="child">20</div>
+    </div>
+
+    <p>Justify-Content</p>
+    <div class="parent justify">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div>
+
+    <p>Align-Items</p>
+    <div class="parent align-items">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div>
+
+    <p>Align-Content</p>
+    <div class="parent align-content">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="child">9</div>
+        <div class="child">10</div>
+        <div class="child">11</div>
+        <div class="child">12</div>
+        <div class="child">13</div>
+        <div class="child">14</div>
+        <div class="child">15</div>
+        <div class="child">16</div>
+        <div class="child">17</div>
+        <div class="child">18</div>
+        <div class="child">19</div>
+        <div class="child">20</div>
+    </div>
+
+    <p>Gap</p>
+    <div class="parent gap">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="child">9</div>
+        <div class="child">10</div>
+        <div class="child">11</div>
+        <div class="child">12</div>
+        <div class="child">13</div>
+        <div class="child">14</div>
+        <div class="child">15</div>
+        <div class="child">16</div>
+        <div class="child">17</div>
+        <div class="child">18</div>
+        <div class="child">19</div>
+        <div class="child">20</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Class - Active</title>
+    <style>
+        html {
+            font-size: 15px;
+        }
+        .first {
+            font-size: 2rem;
+        }
+        .second {
+            font-size: 5rem;
+        }
+        .third {
+            font-size: 4rem;
+        }
+        .fourth {
+            font-size: 3rem;
+        }
+        body {
+            padding: 0px;
+        }
+        .joinBtn {
+            width: 10em;
+            height: 5ex;
+            background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+        .joinBtn:active{
+            box-shadow: 2px 2px 5px #fc894d;
+        }
+    </style>
+</head>
+<body>
+    <p class="first">Would you like to subscribe to our channel?</p>
+    <p class="second">Would you like to subscribe to our channel?</p>
+    <p class="third">Would you like to subscribe to our channel?</p>
+    <p class="fourth">Would you like to subscribe to our channel?</p>
+    <button class="joinBtn">Subscribe</button>
+</body>
+</html>

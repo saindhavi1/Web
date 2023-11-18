@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Object Fit</title>
+    <style>
+        h2 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            margin: 1em 0 0.3em;
+        }
+
+        img {
+            width: 150px;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 10px 0;
+        }
+
+        .narrow {
+            width: 100px;
+            height: 150px;
+        }
+
+        .fill {
+            object-fit: fill;
+        }
+
+        .contain {
+            object-fit: contain;
+        }
+
+        .cover {
+            object-fit: cover;
+        }
+
+        .none {
+            object-fit: none;
+        }
+
+        .scale-down {
+            object-fit: scale-down;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2>object-fit: fill</h2>
+        <img class="fill" src="../../images/man.webp" alt="Man">
+
+        <img class="fill narrow" src="../../images/man.webp" alt="Man">
+
+        <h2>object-fit: contain</h2>
+        <img class="contain" src="../../images/man.webp" alt="Man">
+
+        <img class="contain narrow" src="../../images/man.webp" alt="Man">
+
+        <h2>object-fit: cover</h2>
+        <img class="cover" src="../../images/man.webp" alt="Man">
+
+        <img class="cover narrow" src="../../images/man.webp" alt="Man">
+
+        <h2>object-fit: none</h2>
+        <img class="none" src="../../images/man.webp" alt="Man">
+
+        <img class="none narrow" src="../../images/man.webp" alt="Man">
+
+        <h2>object-fit: scale-down</h2>
+        <img class="scale-down" src="../../images/man.webp" alt="Man">
+
+        <img class="scale-down narrow" src="../../images/man.webp" alt="Man">
+    </section>
+</body>
+
+</html>

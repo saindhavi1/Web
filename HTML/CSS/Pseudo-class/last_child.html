@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Child and Not Pseudoclass</title>
+    <style>
+
+        @font-face {
+            font-family: cursive;
+            src: url(../Text\ &\ Fonts/SquarePeg-Regular);
+        }
+        .parent {
+            display: flex;
+        }
+        .parent>div {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin: 10px;
+            font-family: cursive;
+            text-align: center;
+        }
+        .parent :not(:last-child) {
+            background-color: pink;
+        }
+        .parent :last-child {
+            background-color: lightblue;
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div>First Child</div>
+        <div>Second Child</div>
+        <div>Third Child</div>
+    </div>
+</body>
+
+</html>

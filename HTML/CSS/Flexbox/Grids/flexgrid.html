@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Stream</title>
+    <style>
+        .cards {
+            display: flex;
+            /* Put a card in the next row when previous card take all width*/
+            flex-wrap: wrap;
+            gap: 10px 10px;
+            margin-left: -8px;
+            margin-right: -8px;
+        }
+
+        .cards_item {
+            /*There will be 4 cards per row*/
+            flex-basis: 25%;
+            padding-left: 8px;
+            padding-right: 8px;
+            height: 50px;
+            width: 50px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <div class="cards_item">
+            ...
+        </div>
+        <div class="cards_item">...</div>
+        <div class="cards_item">...</div>
+        <div class="cards_item">...</div>
+        <div class="cards_item">...</div>
+        <div class="cards_item">...</div>
+        <div class="cards_item">...</div>
+        <div class="cards_item">...</div>
+        <div class="cards_item">...</div>
+    </div>
+</body>
+</html>

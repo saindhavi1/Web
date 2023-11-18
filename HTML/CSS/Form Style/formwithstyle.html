@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form With Style</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-size: 1.1rem;
+            font-family: 'Times New Roman', Times, serif;
+            color: #131154;
+        }
+
+        main{
+            margin: 1rem auto;
+            width: 90%;
+            max-width: 1100px;
+        }
+
+        /* FORM */
+
+        select, 
+        option,
+        input,
+        label, 
+        button {
+            padding: 0.2rem 1rem;
+            font-size: 1.3rem;
+        }
+
+        .form-box {
+            padding: 1rem 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-box input, 
+        .form-box select {
+            flex-basis: 100%;
+        }
+
+        @media screen and (min-width:600px) {
+            .form-box {
+                flex-direction: row;
+            }
+
+            .formbox label {
+                flex-basis: 10rem;
+                flex-grow: 0;
+                flex-shrink: 0;
+            }
+
+            .form-box button {
+                margin-left: 12rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <form action="my-form" action="#" method="get">
+            <div class="form-box">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Username">
+            </div>
+            <div class="form-box">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-box">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="form-box">
+                <label for="domain">Domain</label>
+                <select name="domain" id="domain">
+                    <option value="facebook">Facebook</option>
+                    <option value="github">Github</option>
+                    <option value="google">Google</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="twitter">Twitter</option>
+                </select>
+            </div>
+            <div class="form-box">
+                <button id="btnSend">Send</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

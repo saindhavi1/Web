@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Timing Function</title>
+    <style>
+.square {
+  width: 150px;
+  max-height: 100px;
+  background-color: lightcoral;
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 4px;
+
+  transition-property: width;
+  transition-duration: 1s;
+}
+
+.square.ttf-linear {
+  transition-timing-function: linear;
+}
+
+.square.ttf-ease {
+  transition-timing-function: ease;
+}
+
+.square.ttf-ease-in {
+  transition-timing-function: ease-in;
+}
+
+.square.ttf-ease-out {
+  transition-timing-function: ease-out;
+}
+
+.square.ttf-ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.square.ttf-steps {
+  transition-timing-function: steps(3);
+}
+
+.square.ttf-cubic {
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.square:is(:hover, :focus) {
+  width: 25%;
+}
+
+/* Decorative styles */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+    </style>
+</head>
+
+<body>
+    <div class="square ttf-linear" tabindex="0">linear</div>
+    <div class="square ttf-ease" tabindex="0">ease</div>
+    <div class="square ttf-ease-in" tabindex="0">ease-in</div>
+    <div class="square ttf-ease-out" tabindex="0">ease-out</div>
+    <div class="square ttf-ease-in-out" tabindex="0">ease-in-out</div>
+    <div class="square ttf-steps" tabindex="0">steps</div>
+    <div class="square ttf-cubic" tabindex="0">cubic</div>
+</body>
+
+</html>

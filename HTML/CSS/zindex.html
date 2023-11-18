@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index</title>
+    <style>
+        div {
+            height: 180px;
+            width: 200px;
+            margin-bottom: 50px;
+            text-align: center;
+            padding: 50px 0;
+            color: aliceblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-sizing: border-box;
+        }
+
+        .box-1 {
+            border: 1px 1px 1px 1px rgb(142, 2, 100);
+            background-color: rgb(252, 54, 196);
+            position: absolute;
+            left: 50px;
+            top: 0;
+            z-index: 4;
+        }
+
+        .box-2 {
+            border: 1px 1px 1px 1px rgb(2, 107, 56);
+            background-color: rgb(9, 174, 64);
+            position: absolute;
+            left: 150px;
+            top: 150px;
+            z-index: 3;
+        }
+
+        .box-3 {
+            border: 1px 1px 1px 1px rgb(36, 53, 240);
+            background-color: rgb(50, 76, 245);
+            position: absolute;
+            left: 250px;
+            top: 270px;
+            z-index: 2;
+        }
+
+        .box-4{
+            border: 1px 1px 1px 1px rgb(142, 6, 6);
+            background-color: rgb(218, 46, 52);
+            position: absolute;
+            left: 320px;
+            top: 390px;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box-1">Z-index 1</div>
+    <div class="box-2">Z index 2</div>
+    <div class="box-3">Z index 3</div>
+    <div class="box-4">Z index 4</div>
+</body>
+</html>

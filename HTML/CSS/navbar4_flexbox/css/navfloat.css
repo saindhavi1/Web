@@ -1,0 +1,109 @@
+@font-face {
+    font-family: pop-medium;
+    src: url(../font/Poppins-Medium.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 2px;
+}
+
+body {
+    background: darksalmon;
+    font-family: pop-medium;
+}
+
+header {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header h2 {
+    text-align: center;
+
+}
+
+header h2 img {
+    width: 50rem;
+    height: 50rem;
+
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    background: #262626;
+    border-radius: 1.5rem;
+    flex: 1;
+    text-align: center;
+
+}
+
+nav ul li:hover {
+    background: #000000;
+
+
+}
+
+nav ul li a {
+    font-size: 10rem;
+   /* font-family: pop-medium;*/
+    font-weight: 500;
+    color: aliceblue;
+    padding: 15px 0;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+nav ul li:not(:first-child) {
+    border-left: 1rem solid #fff;
+}
+
+input[type=checkbox],
+.cus-menu {
+    display: none;
+    /*font-weight: 900;*/
+}
+
+@media screen and (max-width:600px) {
+    .cus-menu {
+        display: flex;
+        justify-content: center;
+        background: #000000;
+        cursor: pointer;
+        padding: 20px 0;
+        text-transform: uppercase;
+        color: floralwhite;
+        font-size: 10rem;
+        ;
+
+    }
+
+    nav ul {
+        display: none;
+    }
+
+     input[type=checkbox]:checked ~ nav ul{
+        display: block;
+        
+     }
+
+   
+    nav ul li:not(:first-child) {
+        border: 0;
+
+    }
+
+    nav ul li:not(:last-child) {
+        margin: 2px 0;
+
+    }
+
+}
