@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: auto;
+    height: 5rem;
+    margin: 1rem;
+    float: left;
+}
+
+
+.menu ul {
+    margin-top: 2rem;
+}
+
+.main-menu {
+    float: left
+}
+
+.second-menu {
+    float: right
+}
+
+.menu ul li, .salechild ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 1rem;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.second-menu li {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+.menu a:is(:hover, :focus) {
+    color: gray;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.clothes {
+    width: 50%;
+    height: 25rem;
+}
+
+.saleparent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: solid 3px black;*/
+    background-color: #fafafa;
+    width: 100%;
+}
+
+.salechild {
+    color: black;
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.salechild li a {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.salechild ul {
+    line-height: 1.5rem;
+}
+
+.salechild p {
+    margin-bottom: 1rem;
+}
+
+.salechild ul :not(:last-child) {
+    border-right: solid black;
+}
+
+.salechild>ul li a:hover {
+    text-decoration: underline;
+}
+
+.cardparent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    /*color: black;*/
+    width: 30rem;
+    height: auto;
+    /*transition: background-color 1s color 1s box-shadow 1s;*/
+    position: relative;
+}
+
+.cardimg img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.7);
+    object-fit: cover;
+    max-height: 27rem;
+}
+
+.cardtext {
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    color: white;
+    /*text-shadow: 2px 2px 5px black;*/
+    font-size: 1.5rem;
+    padding: 2rem;
+
+}
+
+.shop:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #fafafa;
+    color: black;
+}
+
+.footparent {
+    display: flex;
+    justify-content: space-around;
+}
+
+.foot ul li{
+    list-style-type: none;
+    padding: 0.7rem;
+    color: #888888;
+}
+
+.foot ul li:hover {
+    color: black;
+}
+
+.social li {
+    display: inline-block;
+}
+
+.foot p{
+    font-size: 1.5rem;
+    padding: 0.7rem;
+}
+
+.footchild {
+    padding: 2rem;
+    /*width: 25rem;*/
+}
+
+.fa-brands {
+    font-size: 1rem;
+    padding: 0.8rem;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #fafafa;
+    padding: 1rem;
+    color: #888888
+}
+
+@media screen and (max-width:600px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        background-color: #F4F4F6;
+    }
+
+    .main-menu {
+        display: flex;
+        float: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-menu li:hover {
+        background-color: black;
+        text-decoration: none;
+        color: white;
+    }
+
+    .main-menu a:hover {
+        color: white;
+    }
+
+    .second-menu {
+        opacity: 0;
+    }
+
+    .logo {
+        margin: auto;
+        width: 13rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        height: auto;
+
+    }
+
+    .saleparent {
+        flex-direction: column;
+    }
+
+    .clothes {
+        width: 100%;
+    }
+
+    .salechild {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .salechild ul :not(:last-child) {
+        border-right: 0px;
+    }
+
+    .cardparent {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card {
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+
+    .footparent {
+        flex-direction: column;
+    }
+}

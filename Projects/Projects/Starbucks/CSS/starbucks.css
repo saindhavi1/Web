@@ -1,0 +1,76 @@
+* {
+    background-color: rgb(16, 91, 28);
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 {
+    font-size: 55px;
+    text-align: center;
+    text-decoration: underline;
+    background-color: transparent;
+    text-shadow: 2px 3px 5px rgb(0, 0, 0);
+}
+
+#header {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    background-image: url(../Images/newcoffee.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#logo {
+    float: left;
+    height: 100%;
+    width: 15%;
+    background-color: transparent;
+}
+
+ul {
+    list-style-type: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+    padding: 20px;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: white;
+    color: black;
+    padding: 20px;
+}
+
+.menu a:active {
+    background-color: green;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+}
+#menupic {
+    display: block;
+    margin: auto;
+    height: 30%;
+    width: 30%;
+}
+
+p {
+    font-size: x-large;
+    text-align: center;
+}
+
+hr {
+    height: 5px;
+    color: white;
+    background-color: white;
+    border: none;
+}

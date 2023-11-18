@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.covid {
+    padding: 0.3rem;
+    background-color: rgb(254, 101, 101);
+}
+
+.covid p{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.covid p a{
+    color: black;
+    text-decoration: underline;
+}
+
+.covid p a:hover{
+    text-decoration: none;
+}
+
+.menu{
+    background-color: rgb(242, 240, 240);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+ img{
+    width: auto;
+    height: 8rem;
+    margin-left: 1rem;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.5rem 2rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    position: relative;
+    color: black;
+}
+
+.main-menu ul li a{
+    font-size: 1.25rem;
+}
+
+.small-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
