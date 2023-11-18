@@ -1,0 +1,66 @@
+html, body, nav, ul, li, a, span {
+    margin: 0;padding: 0;
+}
+body {
+    font-family: Helvetica;
+    font-size: 16px;
+}
+nav ul {
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+}
+nav ul li {
+    list-style-type: none;
+    display: block;
+    padding: .8rem 1rem;
+    color: #f9f9f9;
+}
+
+nav ul li a {
+    text-decoration: none;  
+}
+
+nav ul li:hover {
+    background: rgba(0, 0, 0, .25);
+}
+
+i {
+    float: right;
+}
+
+@media only screen and (max-width:480px) {
+    .has-children ul li a{
+        padding-left:2rem;
+    }
+
+    .has-children ul .has-children ul a {
+        padding-left: 3rem;
+    }
+}
+
+@media only screen and (min-width:480px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+    nav ul li {
+        position: relative;
+        flex: 1 0 auto;
+        text-align: left;
+    }
+    .has-children ul {
+        display: none;
+        width: 100%;
+        position: absolute;
+    }
+    .has-children ul .has-children ul {
+        display: none;
+        left:100%;
+        top: 0;
+    }
+    nav ul li:hover ul, .has-children ul .has-children:hover ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
