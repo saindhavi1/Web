@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .new-user-section {
+            display: none;
+            margin-top: 20px;
+            /*border-top: 1px solid #ccc;
+            padding-top: 20px;*/
+        }
+
+        .show-registration {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            color: #007bff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/login" method="post" id="login-section">
+            <h2>Login</h2>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+            <div class="show-registration">New User? Click Here to Register</div>
+    </form>
+    <form action="/register" method="post" class="new-user-section" id="registration-section">
+            <h2>New User? Register Here</h2>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="new-username" placeholder="Username" required>
+            <input type="password" name="new-password" placeholder="Password" required>
+            <input type="submit" value="Register">
+            <div class="show-registration">Already have an account? Click Here to Log In</div>
+    </form>
+
+    <script>
+        let registerButtons = document.getElementsByClassName('show-registration');
+
+        for (let button of registerButtons){
+            button.addEventListener('click', () => {
+                let registrationSection = document.getElementById('registration-section');
+            let loginSection = document.getElementById('login-section');
+            if (registrationSection.style.display === 'none') {
+                loginSection.style.display = 'none';
+                registrationSection.style.display = 'block';
+            } else {
+                registrationSection.style.display = 'none';
+                loginSection.style.display='block';
+            }
+            })
+        }
+       
+    </script>
+</body>
+
+</html>

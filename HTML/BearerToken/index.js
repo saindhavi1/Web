@@ -17,7 +17,7 @@ const verifyToken = (req, res, next) => {
         if (err){
             return res.sendStatus(403); //Forbidden
         }
-        req,user = user;
+        req.user = user;
         next();
     });
 };
@@ -50,8 +50,10 @@ app.listen(3000, () => {
     console.log("server is running on port 3000");
 });
 
+//npm install express jsonwebtoken
+
 //in the body (raw then json), write the username and password
 //then post
 //you will get a token, copy the link without double quotes
 //and then in the header section, write "Authorization" in the key 
-//and "Bearer" and paste the link 
+//and "Bearer" and paste the link in value

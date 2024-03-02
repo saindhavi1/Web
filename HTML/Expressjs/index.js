@@ -15,3 +15,4 @@ app.listen(port, () => {
 //npm init
 //npm install --save-exact
 //npm install pg
+//npm install express dotenv pg
