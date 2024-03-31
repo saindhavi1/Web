@@ -36,11 +36,11 @@ app.use(express.json());
 
 const insertRecord = async (req, res) => {
   console.log("Inside the insertRecord step 42");
-  const { email, username, password } = req.body;
+  const {username, password } = req.body;
   // const name1 =req.body.name;
   try {
     const client = await pool.connect();
-    await client.query('INSERT INTO login (username, password, email) VALUES ($1, $2, $3)', [username, password, email]);
+    await client.query('INSERT INTO login (username, password) VALUES ($1, $2);', [username, password]);
     client.release();
     res.send('Record inserted successfully.');
   } catch (err) {

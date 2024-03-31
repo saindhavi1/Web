@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=PT+Serif&family=Poppins:wght@100;200;400;700&display=swap');
+*{
+    font-family: Josefin Sans;
+}
+body{
+    display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+
+}
+  .tabs {
+    display: flex;
+    justify-content: center;
+    
+  }
+  .tab {
+    cursor: pointer;
+    padding: 25px 103px;
+    background-color: #BD927C;
+    color: white;
+    border: 1px solid #F9DDCD;
+    border-bottom: none;
+    font-size: 30px;
+  }
+  .tab.active {
+    background-color: #F9DDCD;
+    color: black;
+  }
+  .form-container {
+    width: 540px;
+    height: 380px;
+    margin: 0 auto;
+    padding: 30px;
+    padding-top: none;
+    background-color: #F9DDCD;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    font-size: 40px;
+    display: block;
+    color: #AB7055;
+    margin-bottom: 15px;
+  }
+  .form-group input {
+    font-size: 20px;
+    color: gray;
+    width: 93%;
+    margin-bottom: 10px;
+    padding: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .form-group button {
+    width: 100%;
+    padding: 20px;
+    font-size: 30px;
+    background-color: #BD927C;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

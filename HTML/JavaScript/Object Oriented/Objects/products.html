@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card" id="1"></div>
+    <div class="card" id="2"></div>
+    <div class="card" id="3"></div>
+    <script>
+        const productCards = document.getElementsByClassName("card");
+        const products = [
+            {id: 1, name: "T-shirt", price: 25.99, category: "Clothing"},
+            {id:2, name: "Coffee Mug", price: 9.99, category: "Kitchen"},
+            {id:3, name: "Laptop", price: 799.99, category: "Electronics"},
+        ];
+
+        console.table(products);
+
+        //add new products
+        function addProduct(id, name, price, category){
+            products.push({id, name, price, category});
+        }
+
+        //edit product
+        function editProduct(id, name, price, category){
+            const index = products.findIndex((product) => product.id === id);
+            if (index!== -1){
+                products[index] = {id, name, price, category};
+            } else{
+                console.log("Product not found");
+            }
+        }
+
+        //delete product
+        function deleteProduct(id){
+            const index = products.findIndex((product) => product.id === id);
+            if (index !== -1){
+                products.splice(index, 1);
+            } else{
+                console.log("Product not found");
+            }
+        }
+
+        //search product
+        function searchProduct(name){
+            return products.filter((product) => product.name === name);
+        }
+
+        //list products
+        function listProducts() {
+            return products;
+        }
+
+        addProduct(4, "Laptop", 799.99, "Electronics");
+        console.table(products);
+
+        editProduct(2, "Coffee Mug", 9.99, "Kitchen");
+        console.table(products);
+
+        deleteProduct(3);
+        console.table(products);
+
+        console.log(searchProduct("T-Shirt"));
+        console.log(listProducts());
+        //display products in table format
+        console.table(listProducts());
+
+        for (i = 0; i < products.length; i++){
+            productCards[i].textContent = products[i].name + "\n$" + products[i].price
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=PT+Serif&family=Poppins:wght@100;200;400;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Josefin Sans;
+}
+
+.menu {
+    background-color: #BD927C;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    height: 75px;
+}
+
+#login {
+    margin: 25px;
+    color: white;
+    text-decoration: none;
+}
+#login a:hover{
+text-decoration: underline;
+}
+
+#login a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.promo {
+    margin: 50px;
+    background-color: #BD927C;
+    width: 90%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.catchphrase {
+    color: white;
+    margin: 20px;
+    text-align: center;
+}
+
+.shop {
+    background-color: #DCA88D;
+    border: none;
+    color: white;
+    height: 75px;
+    width: 150px;
+    margin: 20px;
+}
+
+.spline {
+    width: 700px;
+    height: 250px;
+}
+
+.products {
+    display: flex;
+    flex-direction: row;
+
+
+    justify-content: space-between;
+}
+
+.picture {
+    width: 300px;
+    height: auto;
+    margin: 1rem;
+}
+
+.product {
+    position: relative;
+}
+
+.picture img {
+    width: 100%;
+    height: auto;
+    display: relative;
+    object-fit: cover;
+    max-height: 325px;
+    filter: brightness(0.8);
+}
+
+/*.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(220, 168, 141, 0.527);
+}*/
+
+.product p {
+    position: absolute;
+    top: 0;
+    width: auto;
+    color: white;
+    /*text-shadow: 2px 2px 5px black;*/
+    font-size: 1.5rem;
+    padding: 2rem;
+}

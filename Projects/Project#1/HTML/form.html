@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Sign Up Form</title>
+  <link rel="stylesheet" href="../CSS/formstyle.css">
+
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab" id="loginTab" onclick="showTab('login')">Login</div>
+    <div class="tab" id="signupTab" onclick="showTab('signup')">Sign Up</div>
+  </div>
+  
+  <div class="form-container" id="loginForm">
+    <form action="/login" method="post">
+      <div class="form-group">
+        <label for="loginUsername">Username</label>
+        <input type="text" id="loginUsername" name="loginUsername" placeholder="Enter Username" required>
+      </div>
+      <div class="form-group">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter Password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="form-container" id="signupForm" style="display: none;">
+    <form action="/register" method="post">
+      <div class="form-group">
+        <label for="signupUsername">Username</label>
+        <input type="text" id="signupUsername" name="signupUsername" placeholder="Enter Username" required>
+      </div>
+      <div class="form-group">
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword" name="signupPassword" placeholder="Enter Password" required>
+      </div>
+      <div class="form-group">
+        <label for="signupPassword">Confirm Password</label>
+        <input type="password" id="signupPassword" name="signupPassword" placeholder="Confirm Password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Sign Up</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function showTab(tabName) {
+      var loginTab = document.getElementById('loginTab');
+      var signupTab = document.getElementById('signupTab');
+      var loginForm = document.getElementById('loginForm');
+      var signupForm = document.getElementById('signupForm');
+      
+
+      if (tabName === 'login') {
+        loginTab.classList.add('active');
+        loginForm.style.height="380px"
+        signupTab.classList.remove('active');
+        loginForm.style.display = 'block';
+        signupForm.style.display = 'none';
+      } else if (tabName === 'signup') {
+        loginTab.classList.remove('active');
+        signupTab.classList.add('active');
+        signupForm.style.height = "500px"
+        loginForm.style.display = 'none';
+        signupForm.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>

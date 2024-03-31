@@ -20,12 +20,13 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 app.use(express.json());
 
+console.log("Hello");
 app.post("/register", (req, res) => {
-    const {email, username, password} = req.body;
+    const {username, password, password2} = req.body;
     try{
         db.insertRecord(req, res);
 
-        console.log(`Received Data: Email - ${email} Username - ${username} Password - ${password}`);
+        console.log(`Received Data: Username - ${username} Password - ${password}`);
 
         res.send('Form submitted successfully')
     } catch (error) {
@@ -57,3 +58,7 @@ const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+//day 1 -> create post methods
+//day 2 -> database connection
+//day 3 -> combine everything together
